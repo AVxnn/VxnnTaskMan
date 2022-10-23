@@ -4,10 +4,17 @@
   max-width: 350px
   width: 100%
 
+  @media screen and (max-width: 1024px)
+    max-width: 280px
+
   &-title
     margin: 0 0 16px 0
     font-size: $font-64px
     color: $main-white
+
+    @media screen and (max-width: 768px)
+      font-size: $font-32px
+      margin: 0 0 12px 0
 
   &-form
     display: flex

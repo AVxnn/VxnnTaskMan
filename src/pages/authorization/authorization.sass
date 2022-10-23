@@ -5,24 +5,55 @@
   height: 100vh
   display: flex
 
+  @media screen and (max-width: 768px)
+    flex-direction: column
+
   .bg-left
     position: relative
     width: 34%
     height: 100%
     background-color: $bg-main1
 
+    @media screen and (max-width: 768px)
+      height: 30%
+      width: 100%
+      display: flex
+      align-items: center
+      justify-content: center
+
     .bg-left-logotype
       width: auto
       position: relative
       height: auto
+      display: flex
+      justify-content: center
+      align-items: center
       top: 120px
       left: 50%
       margin-left: -130px
 
+      @media screen and (max-width: 768px)
+        margin-left: 0
+        position: inherit
+        top: 0
+        height: 60px
+        width: 265px
+        left: 0
+        display: flex
+        align-items: center
+        justify-content: center
+
     .bg-left-time
       position: absolute
       bottom: 0
+      left: 0
       width: 80%
+
+      @media screen and (max-width: 1024px)
+        width: 80%
+
+      @media screen and (max-width: 768px)
+        width: 20%
 
       .bg-left-time_img
         width: 100%
@@ -34,3 +65,7 @@
     display: flex
     align-items: center
     justify-content: center
+
+    @media screen and (max-width: 768px)
+      height: 70%
+      width: 100%

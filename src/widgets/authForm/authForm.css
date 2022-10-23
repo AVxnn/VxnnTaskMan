@@ -2,10 +2,21 @@
   max-width: 350px;
   width: 100%;
 }
+@media screen and (max-width: 1024px) {
+  .authForm {
+    max-width: 280px;
+  }
+}
 .authForm-title {
   margin: 0 0 16px 0;
   font-size: 64px;
   color: #FFFFFF;
+}
+@media screen and (max-width: 768px) {
+  .authForm-title {
+    font-size: 32px;
+    margin: 0 0 12px 0;
+  }
 }
 .authForm-form {
   display: flex;
