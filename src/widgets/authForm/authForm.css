@@ -1,0 +1,15 @@
+.authForm {
+  max-width: 350px;
+  width: 100%;
+}
+.authForm-title {
+  margin: 0 0 16px 0;
+  font-size: 64px;
+  color: #FFFFFF;
+}
+.authForm-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/*# sourceMappingURL=authForm.css.map */

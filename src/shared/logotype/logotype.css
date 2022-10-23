@@ -1,0 +1,95 @@
+.logotype-link {
+  position: absolute;
+  left: 0;
+}
+.logotype-link:hover::before {
+  animation: rotater ease-in-out 1.5s;
+}
+.logotype-link:hover::after {
+  animation: rotaterAfter ease-in-out 0.75s 2;
+}
+.logotype-link::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 6px;
+  height: 20px;
+  left: 53px;
+  top: 16px;
+  border-radius: 8px;
+  border-color: #9685FF;
+  background-color: #9685FF;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.logotype-link::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 6px;
+  height: 20px;
+  left: 60px;
+  top: 23px;
+  transform: rotate(90deg);
+  border-radius: 8px;
+  border-color: #9685FF;
+  background-color: #9685FF;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.logotype-link .logotype {
+  width: 260px;
+}
+
+@keyframes rotater {
+  0% {
+    transform: rotate(0deg);
+    left: 53px;
+  }
+  25% {
+    transform: rotate(90deg);
+    left: 60px;
+    top: 23px;
+  }
+  50% {
+    transform: rotate(180deg);
+    left: 53px;
+    top: 32px;
+  }
+  75% {
+    transform: rotate(270deg);
+    left: 43px;
+    top: 22px;
+  }
+  100% {
+    transform: rotate(360deg);
+    left: 53px;
+  }
+}
+@keyframes rotaterAfter {
+  0% {
+    transform: rotate(90deg);
+    left: 60px;
+  }
+  25% {
+    transform: rotate(180deg);
+    left: 53px;
+    top: 32px;
+  }
+  50% {
+    transform: rotate(270deg);
+    left: 43px;
+    top: 22px;
+  }
+  75% {
+    transform: rotate(360deg);
+    left: 53px;
+    top: 16px;
+  }
+  100% {
+    transform: rotate(440deg);
+    left: 60px;
+  }
+}
+
+/*# sourceMappingURL=logotype.css.map */

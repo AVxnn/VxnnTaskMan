@@ -1,0 +1,19 @@
+.button {
+  outline: none;
+  border: none;
+  background-color: #9685FF;
+  color: #FFFFFF;
+  border-radius: 8px;
+  height: 50px;
+  font-size: 16px;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: #7164C2;
+}
+.button:active {
+  background-color: #B6AAFF;
+}
+
+/*# sourceMappingURL=button.css.map */
