@@ -1,0 +1,50 @@
+.block {
+  padding: 16px 20px;
+  border-radius: 8px;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+}
+.block .title {
+  font-size: 12px;
+  white-space: nowrap;
+  margin: 0 0 4px 0;
+}
+.block .text {
+  font-size: 32px;
+  font-weight: 500;
+  margin: 0;
+}
+.block .block-container .title {
+  font-size: 12px;
+  white-space: nowrap;
+  margin: 0 0 4px 0;
+}
+.block .block-container .text {
+  font-size: 32px;
+  font-weight: 500;
+  margin: 0;
+}
+.block .block-btn {
+  width: 28px;
+  height: 28px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  margin-bottom: 6px;
+  background-image: url("../../../src/images/pen.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  margin-left: 26px;
+  transition: all 0.1s ease-in-out;
+}
+.block .block-btn:hover {
+  background-color: #D9D9D9;
+}
+.block .block-btn:active {
+  background-color: #ABABAB;
+}
+
+/*# sourceMappingURL=block.css.map */

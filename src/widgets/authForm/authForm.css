@@ -7,6 +7,19 @@
     max-width: 280px;
   }
 }
+.authForm .authForm-container {
+  margin-bottom: 64px;
+}
+@media screen and (max-width: 1024px) {
+  .authForm .authForm-container {
+    margin-bottom: 32px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .authForm .authForm-container {
+    margin-bottom: 16px;
+  }
+}
 .authForm-title {
   margin: 0 0 16px 0;
   font-size: 64px;

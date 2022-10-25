@@ -1,21 +1,22 @@
-.container {
+.container-auth {
   width: 100%;
   height: 100vh;
   display: flex;
+  flex-direction: row;
 }
 @media screen and (max-width: 768px) {
-  .container {
+  .container-auth {
     flex-direction: column;
   }
 }
-.container .bg-left {
+.container-auth .bg-left {
   position: relative;
   width: 34%;
   height: 100%;
   background-color: #9685FF;
 }
 @media screen and (max-width: 768px) {
-  .container .bg-left {
+  .container-auth .bg-left {
     height: 30%;
     width: 100%;
     display: flex;
@@ -23,7 +24,7 @@
     justify-content: center;
   }
 }
-.container .bg-left .bg-left-logotype {
+.container-auth .bg-left .bg-left-logotype {
   width: auto;
   position: relative;
   height: auto;
@@ -35,7 +36,7 @@
   margin-left: -130px;
 }
 @media screen and (max-width: 768px) {
-  .container .bg-left .bg-left-logotype {
+  .container-auth .bg-left .bg-left-logotype {
     margin-left: 0;
     position: inherit;
     top: 0;
@@ -47,27 +48,27 @@
     justify-content: center;
   }
 }
-.container .bg-left .bg-left-time {
+.container-auth .bg-left .bg-left-time {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 80%;
 }
 @media screen and (max-width: 1024px) {
-  .container .bg-left .bg-left-time {
+  .container-auth .bg-left .bg-left-time {
     width: 80%;
   }
 }
 @media screen and (max-width: 768px) {
-  .container .bg-left .bg-left-time {
+  .container-auth .bg-left .bg-left-time {
     width: 20%;
   }
 }
-.container .bg-left .bg-left-time .bg-left-time_img {
+.container-auth .bg-left .bg-left-time .bg-left-time_img {
   width: 100%;
   height: 100%;
 }
-.container .bg-right {
+.container-auth .bg-right {
   width: 66%;
   height: 100%;
   display: flex;
@@ -75,7 +76,7 @@
   justify-content: center;
 }
 @media screen and (max-width: 768px) {
-  .container .bg-right {
+  .container-auth .bg-right {
     height: 70%;
     width: 100%;
   }

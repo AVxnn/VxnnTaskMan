@@ -58,7 +58,9 @@ const AuthForm = () => {
     <>
       <section className='authForm'>
         <h2 className='authForm-title'>Sign In</h2>
-        <Alert maxWidth={'263'} text={`You can get authorization data from the admin.`}/>
+        <section className='authForm-container'>
+          <Alert maxWidth={'263'} text={`You can get authorization data from the admin.`}/>
+        </section>
         <form className="authForm-form" action="">
           <Form image={user} placeHolder={'Email'} path={'email'} type={'email'} setData={setHandler} data={data}/>
           <Form image={lock} placeHolder={'Password'} path={'password'} type={'password'} setData={setHandler} data={data}/>

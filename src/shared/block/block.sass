@@ -1,0 +1,51 @@
+@import "../../variables.sass"
+
+.block
+  padding: 16px 20px
+  border-radius: 8px
+  color: $main-white
+  display: flex
+  flex-direction: column
+
+  .title
+    font-size: $font-12px
+    white-space: nowrap
+    margin: 0 0 4px 0
+
+  .text
+    font-size: $font-32px
+    font-weight: 500
+    margin: 0
+
+  .block-container
+
+    .title
+      font-size: $font-12px
+      white-space: nowrap
+      margin: 0 0 4px 0
+
+    .text
+      font-size: $font-32px
+      font-weight: 500
+      margin: 0
+
+  .block-btn
+    width: 28px
+    height: 28px
+    border: none
+    outline: none
+    cursor: pointer
+    background-color: $main2
+    border-radius: 8px
+    margin-bottom: 6px
+    background-image: url("../../../src/images/pen.png")
+    background-repeat: no-repeat
+    background-position: 50% 50%
+    margin-left: 26px
+    transition: all 0.1s ease-in-out
+
+    &:hover
+      background-color: $main2_hover
+
+    &:active
+      background-color: $main2_active

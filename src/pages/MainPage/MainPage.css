@@ -1,8 +1,67 @@
 .container {
   width: 100%;
   display: flex;
+  flex-direction: column;
   height: 100vh;
-  justify-content: center;
+  align-items: center;
+  background-image: url("../../images/timeblack.png");
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 18%;
+}
+.container .mainPage {
+  max-width: 940px;
+  width: 100%;
+}
+.container .mainPage .blocks {
+  display: flex;
+  width: 100%;
+}
+.container .mainPage .blocks .left-block {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.container .mainPage .blocks .left-block .header {
+  display: flex;
+  height: auto;
+  width: 100%;
+  max-width: 732px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.container .mainPage .blocks .left-block .chart-block {
+  width: 100%;
+  max-width: 733px;
+}
+.container .mainPage .blocks .left-block .chart-block .chart {
+  margin-top: 16px;
+  padding: 16px 20px;
+  height: 198px;
+  border-radius: 8px;
+  max-width: 692px;
+  background-color: #303030;
+}
+.container .mainPage .alert-block {
+  max-width: 316px;
+  margin: 32px 0;
+}
+.container .mainPage .start-btn {
+  width: 100%;
+  height: 64px;
+  font-size: 24px;
+  color: #FFFFFF;
+  font-weight: 700;
+  background-color: #9685FF;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+}
+.container .mainPage .start-btn:hover {
+  background-color: #7164C2;
+}
+.container .mainPage .start-btn:active {
+  background-color: #B6AAFF;
 }
 
 /*# sourceMappingURL=MainPage.css.map */

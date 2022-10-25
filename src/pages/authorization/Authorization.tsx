@@ -11,7 +11,7 @@ const Authorization = () => {
 
   return (
     <>
-      <div className='container'>
+      <div className='container-auth'>
         <div className='bg-left'>
           <section className='bg-left-logotype'>
             <Logotype />
