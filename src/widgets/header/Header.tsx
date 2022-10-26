@@ -10,7 +10,9 @@ const Header = () => {
   return (
     <>
       <header className="header">
-        <Logotype />
+        <section className='header-logotype'>
+          <Logotype />
+        </section>
         <section className="header-time">
           <span className="header-time-span">Now</span>
           <span className="header-time-data"><Moment format="HH:mm" local>{data}</Moment></span>

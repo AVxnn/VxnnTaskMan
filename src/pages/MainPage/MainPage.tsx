@@ -5,8 +5,12 @@ import Hello from "../../shared/hello/Hello";
 import Block from "../../shared/block/Block";
 import Chart from "../../widgets/chart/Chart";
 import Alert from "../../shared/alert/alert";
+import NavBar from "../../widgets/navBar/NavBar";
 
 const MainPage = () => {
+
+
+
   return (
     <div className='container'>
       <Header />
@@ -15,10 +19,10 @@ const MainPage = () => {
         <section className='blocks'>
           <section className='left-block'>
             <header className='header'>
-              <Block custom={false} header={'Worked today'} text={'3:20'} color={'#9685FF'}/>
-              <Block custom={false} header={'Need to work out'} text={'4:40'} color={'#FF85EB'}/>
-              <Block custom={true} header={'Hours worked per week'} text={'24 / 40'} color={'#FF8585'}/>
-              <Block custom={false} header={'Shock mode'} text={'18'} color={'#FF85EB'}/>
+              <Block blocker={false} custom={false} header={'Worked today'} text={'3:20'} color={'#9685FF'}/>
+              <Block blocker={false} custom={false} header={'Need to work out'} text={'4:40'} color={'#FF85EB'}/>
+              <Block blocker={false} custom={true} header={'Hours worked per week'} text={'24 / 40'} color={'#FF8585'}/>
+              <Block blocker={true} custom={false} header={'Shock mode'} text={'18'} color={'#FF85EB'}/>
             </header>
             <div className='chart-block'>
               <div className='chart'>
@@ -28,7 +32,7 @@ const MainPage = () => {
             </div>
           </section>
           <section className='right-block'>
-
+            <NavBar />
           </section>
         </section>
         <section className='alert-block'>

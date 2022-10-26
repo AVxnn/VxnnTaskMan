@@ -2,11 +2,21 @@
   font-size: 16px;
   color: #FFFFFF;
 }
+@media screen and (max-width: 768px) {
+  .hello-subtitle {
+    font-size: 10px;
+  }
+}
 
 .hello-title {
   margin: 2px 0 32px 0;
   font-size: 32px;
   color: #FFFFFF;
+}
+@media screen and (max-width: 768px) {
+  .hello-title {
+    font-size: 24px;
+  }
 }
 
 /*# sourceMappingURL=hello.css.map */

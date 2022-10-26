@@ -10,10 +10,10 @@
   cursor: pointer;
 }
 .button:hover {
-  background-color: #7164C2;
+  background-color: #8678E0;
 }
 .button:active {
-  background-color: #B6AAFF;
+  background-color: #7467C0;
 }
 
 /*# sourceMappingURL=button.css.map */

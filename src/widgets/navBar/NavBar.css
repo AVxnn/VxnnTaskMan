@@ -1,0 +1,14 @@
+.navBar {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  .navBar {
+    margin-top: 20px;
+    flex-direction: row;
+  }
+}
+
+/*# sourceMappingURL=NavBar.css.map */

@@ -5,7 +5,7 @@
   color: #999999;
   font-size: 12px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .alert {
     font-size: 10px;
   }

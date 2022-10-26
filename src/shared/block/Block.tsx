@@ -1,7 +1,11 @@
 import React from 'react';
 import './block.sass'
 
-const Block = ({color, header, text, custom}) : any => {
+const Block = ({blocker, color, header, text, custom}) : any => {
+
+  if (blocker && window.innerWidth <= 768) {
+      return null
+  }
 
   if(custom) {
     return (

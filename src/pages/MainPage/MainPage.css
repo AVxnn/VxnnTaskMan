@@ -13,14 +13,45 @@
   max-width: 940px;
   width: 100%;
 }
+@media screen and (max-width: 1280px) {
+  .container .mainPage {
+    max-width: 809px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container .mainPage {
+    max-width: 689px;
+  }
+}
 .container .mainPage .blocks {
   display: flex;
   width: 100%;
 }
+@media screen and (max-width: 768px) {
+  .container .mainPage .blocks {
+    flex-wrap: wrap;
+  }
+}
 .container .mainPage .blocks .left-block {
   width: 100%;
+  max-width: 765px;
   display: flex;
   flex-direction: column;
+  margin-right: 32px;
+}
+@media screen and (max-width: 1024px) {
+  .container .mainPage .blocks .left-block {
+    max-width: 537px;
+    margin-right: 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container .mainPage .blocks .left-block {
+    max-height: 216px;
+    max-width: 100%;
+    margin: 0;
+    width: 100%;
+  }
 }
 .container .mainPage .blocks .left-block .header {
   display: flex;
@@ -30,9 +61,40 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+@media screen and (max-width: 1280px) {
+  .container .mainPage .blocks .left-block .header {
+    max-width: 637px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container .mainPage .blocks .left-block .header {
+    max-width: 537px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container .mainPage .blocks .left-block .header {
+    max-width: 100%;
+    width: 100%;
+  }
+}
 .container .mainPage .blocks .left-block .chart-block {
   width: 100%;
   max-width: 733px;
+}
+@media screen and (max-width: 1280px) {
+  .container .mainPage .blocks .left-block .chart-block {
+    max-width: 637px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container .mainPage .blocks .left-block .chart-block {
+    max-width: 537px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container .mainPage .blocks .left-block .chart-block {
+    max-width: 500%;
+  }
 }
 .container .mainPage .blocks .left-block .chart-block .chart {
   margin-top: 16px;
@@ -42,9 +104,49 @@
   max-width: 692px;
   background-color: #303030;
 }
+@media screen and (max-width: 1280px) {
+  .container .mainPage .blocks .left-block .chart-block .chart {
+    height: 174px;
+    padding: 13px 20px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container .mainPage .blocks .left-block .chart-block .chart {
+    height: 154px;
+    padding: 13px 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container .mainPage .blocks .left-block .chart-block .chart {
+    height: 130px;
+    padding: 8px 8px;
+  }
+}
+.container .mainPage .blocks .right-block {
+  max-width: 174px;
+  width: 100%;
+  max-height: 288px;
+}
+@media screen and (max-width: 1024px) {
+  .container .mainPage .blocks .right-block {
+    max-height: 260px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container .mainPage .blocks .right-block {
+    max-height: 216px;
+    max-width: 100%;
+    width: 100%;
+  }
+}
 .container .mainPage .alert-block {
   max-width: 316px;
   margin: 32px 0;
+}
+@media screen and (max-width: 1024px) {
+  .container .mainPage .alert-block {
+    margin: 12px 0;
+  }
 }
 .container .mainPage .start-btn {
   width: 100%;
@@ -57,11 +159,16 @@
   border-radius: 8px;
   transition: all 0.2s ease-in-out;
 }
+@media screen and (max-width: 1024px) {
+  .container .mainPage .start-btn {
+    font-size: 20px;
+  }
+}
 .container .mainPage .start-btn:hover {
-  background-color: #7164C2;
+  background-color: #8678E0;
 }
 .container .mainPage .start-btn:active {
-  background-color: #B6AAFF;
+  background-color: #7467C0;
 }
 
 /*# sourceMappingURL=MainPage.css.map */
