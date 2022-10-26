@@ -19,10 +19,10 @@ const MainPage = () => {
         <section className='blocks'>
           <section className='left-block'>
             <header className='header'>
-              <Block blocker={false} custom={false} header={'Worked today'} text={'3:20'} color={'#9685FF'}/>
-              <Block blocker={false} custom={false} header={'Need to work out'} text={'4:40'} color={'#FF85EB'}/>
-              <Block blocker={false} custom={true} header={'Hours worked per week'} text={'24 / 40'} color={'#FF8585'}/>
-              <Block blocker={true} custom={false} header={'Shock mode'} text={'18'} color={'#FF85EB'}/>
+              <Block left={false} blocker={false} custom={false} header={'Worked today'} text={'3:20'} color={'#9685FF'}/>
+              <Block left={false} blocker={false} custom={false} header={'Need to work out'} text={'4:40'} color={'#FF85EB'}/>
+              <Block left={false} blocker={false} custom={true} header={'Hours worked per week'} text={'24 / 40'} color={'#FF8585'}/>
+              <Block left={true} blocker={true} custom={false} header={'Shock mode'} text={'18'} color={'#FF85EB'}/>
             </header>
             <div className='chart-block'>
               <div className='chart'>

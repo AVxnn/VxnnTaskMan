@@ -2,8 +2,11 @@
   padding: 16px 20px;
   border-radius: 8px;
   color: #FFFFFF;
+  width: 100%;
+  margin-right: 10px;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
 }
 @media screen and (max-width: 1280px) {
   .block {
@@ -20,7 +23,7 @@
     padding: 12px 16px;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 540px) {
   .block {
     padding: 8px 8px;
   }
@@ -87,7 +90,9 @@
 }
 .block .block-btn {
   width: 28px;
+  min-width: 28px;
   height: 28px;
+  min-height: 28px;
   border: none;
   outline: none;
   cursor: pointer;
@@ -103,7 +108,9 @@
 @media screen and (max-width: 1280px) {
   .block .block-btn {
     width: 24px;
+    min-width: 24px;
     height: 24px;
+    min-height: 24px;
     margin-bottom: 3px;
   }
 }
@@ -112,6 +119,11 @@
 }
 .block .block-btn:active {
   background-color: #ABABAB;
+}
+
+.block-left {
+  margin-left: 10px;
+  margin-right: 0;
 }
 
 /*# sourceMappingURL=block.css.map */

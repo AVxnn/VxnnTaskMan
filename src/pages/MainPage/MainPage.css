@@ -10,7 +10,8 @@
   background-size: 18%;
 }
 .container .mainPage {
-  max-width: 940px;
+  max-width: 900px;
+  margin: 20px;
   width: 100%;
 }
 @media screen and (max-width: 1280px) {
@@ -21,6 +22,11 @@
 @media screen and (max-width: 1024px) {
   .container .mainPage {
     max-width: 689px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container .mainPage {
+    max-width: 90%;
   }
 }
 .container .mainPage .blocks {
@@ -58,7 +64,6 @@
   height: auto;
   width: 100%;
   max-width: 732px;
-  flex-wrap: wrap;
   justify-content: space-between;
 }
 @media screen and (max-width: 1280px) {
