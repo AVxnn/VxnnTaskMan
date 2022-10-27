@@ -53,7 +53,7 @@
 }
 @media screen and (max-width: 768px) {
   .container .mainPage .blocks .left-block {
-    max-height: 216px;
+    max-height: 256px;
     max-width: 100%;
     margin: 0;
     width: 100%;
@@ -103,28 +103,23 @@
 }
 .container .mainPage .blocks .left-block .chart-block .chart {
   margin-top: 16px;
-  padding: 16px 20px;
-  height: 198px;
+  height: 230px;
   border-radius: 8px;
   max-width: 692px;
-  background-color: #303030;
 }
 @media screen and (max-width: 1280px) {
   .container .mainPage .blocks .left-block .chart-block .chart {
-    height: 174px;
-    padding: 13px 20px;
+    height: 199px;
   }
 }
 @media screen and (max-width: 1024px) {
   .container .mainPage .blocks .left-block .chart-block .chart {
-    height: 154px;
-    padding: 13px 20px;
+    height: 180px;
   }
 }
 @media screen and (max-width: 768px) {
   .container .mainPage .blocks .left-block .chart-block .chart {
-    height: 130px;
-    padding: 8px 8px;
+    height: 160px;
   }
 }
 .container .mainPage .blocks .right-block {
@@ -144,6 +139,13 @@
     width: 100%;
   }
 }
+@media screen and (max-width: 768px) {
+  .container .mainPage .footer-main {
+    position: fixed;
+    width: 90%;
+    bottom: 20px;
+  }
+}
 .container .mainPage .alert-block {
   max-width: 316px;
   margin: 32px 0;
@@ -156,6 +158,7 @@
 .container .mainPage .start-btn {
   width: 100%;
   height: 64px;
+  border: none;
   font-size: 24px;
   color: #FFFFFF;
   font-weight: 700;

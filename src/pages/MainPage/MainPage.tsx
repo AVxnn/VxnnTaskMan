@@ -35,12 +35,14 @@ const MainPage = () => {
             <NavBar />
           </section>
         </section>
-        <section className='alert-block'>
-          <Alert maxWidth={'316'} text={`Press the "Start working" button and start working. Have a nice working day!`}/>
-        </section>
+        <section className='footer-main'>
+          <section className='alert-block'>
+            <Alert maxWidth={'316'} text={`Press the "Start working" button and start working. Have a nice working day!`}/>
+          </section>
           <button className='start-btn'>
             Start working
           </button>
+        </section>
       </section>
     </div>
   );

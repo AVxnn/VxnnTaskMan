@@ -11,7 +11,7 @@ const Block = ({blocker, color, header, left, text, custom}) : any => {
     return (
       <>
         <div style={{backgroundColor: color, flexDirection: 'row', alignItems: 'flex-end', marginRight: '0'}} className='block'>
-          <div className='block-container'>
+          <div style={{marginRight: '30px'}} className='block-container'>
             <p className='title'>{header}</p>
             <h2 className='text'>{text}</h2>
           </div>
