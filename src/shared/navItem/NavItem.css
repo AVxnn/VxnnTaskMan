@@ -1,6 +1,16 @@
 .nav-item-link {
   text-decoration: none;
   width: 100%;
+  opacity: 0;
+  animation: anim 1s forwards;
+}
+@keyframes anim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .nav-item {

@@ -38,7 +38,7 @@ const options = {
           return ""
         },
       },
-      backgroundColor: '#555555',
+      backgroundColor: '#303030',
       caretSize: 4,
       padding: 12,
       titleMarginBottom: 0,

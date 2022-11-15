@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import { Routes, Route } from "react-router-dom";
 import Layout from "./pages/layout/Layout";
 import Authorization from "./pages/authorization/Authorization";
@@ -11,7 +10,11 @@ function App() {
     <>
       <Layout>
         <Routes>
-          <Route path="auth" element={<Authorization />} />
+          <Route path="auth" element={
+            <PrivateRoute>
+              <Authorization />
+            </PrivateRoute>
+          } />
           <Route path="/" element={
             <PrivateRoute>
               <MainPage />

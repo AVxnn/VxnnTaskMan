@@ -1,21 +1,43 @@
-.hello-subtitle {
-  font-size: 16px;
-  color: #FFFFFF;
+.hello {
+  position: relative;
+  margin-bottom: 64px;
 }
 @media screen and (max-width: 768px) {
-  .hello-subtitle {
+  .hello {
+    margin-bottom: 44px;
+  }
+}
+.hello .hello-subtitle {
+  font-size: 16px;
+  color: #FFFFFF;
+  opacity: 0;
+  animation: anim 1s forwards;
+  animation-delay: 100ms;
+}
+@media screen and (max-width: 768px) {
+  .hello .hello-subtitle {
     font-size: 10px;
   }
 }
-
-.hello-title {
-  margin: 2px 0 32px 0;
+.hello .hello-title {
+  position: absolute;
+  margin: 2px 0 0 0;
   font-size: 32px;
   color: #FFFFFF;
+  animation: anim 1s forwards;
+  opacity: 0;
 }
 @media screen and (max-width: 768px) {
-  .hello-title {
+  .hello .hello-title {
     font-size: 24px;
+  }
+}
+@keyframes anim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 

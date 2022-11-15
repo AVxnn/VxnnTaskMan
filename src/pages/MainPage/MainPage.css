@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
+  justify-content: center;
   align-items: center;
   background-image: url("../../images/timeblack.png");
   background-repeat: no-repeat;
@@ -13,6 +14,7 @@
   max-width: 900px;
   margin: 20px;
   width: 100%;
+  margin-bottom: 150px;
 }
 @media screen and (max-width: 1280px) {
   .container .mainPage {
@@ -106,6 +108,16 @@
   height: 230px;
   border-radius: 8px;
   max-width: 692px;
+  opacity: 0;
+  animation: anim 1s forwards;
+}
+@keyframes anim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 @media screen and (max-width: 1280px) {
   .container .mainPage .blocks .left-block .chart-block .chart {
@@ -177,6 +189,15 @@
 }
 .container .mainPage .start-btn:active {
   background-color: #7467C0;
+}
+.container .mainPage .secondColor {
+  background-color: #53D780;
+}
+.container .mainPage .secondColor:hover {
+  background-color: #45b36b;
+}
+.container .mainPage .secondColor:active {
+  background-color: #368852;
 }
 
 /*# sourceMappingURL=MainPage.css.map */

@@ -5,6 +5,7 @@
   display: flex
   flex-direction: column
   height: 100vh
+  justify-content: center
   align-items: center
   background-image: url("../../images/timeblack.png")
   background-repeat: no-repeat
@@ -15,6 +16,7 @@
     max-width: 900px
     margin: 20px
     width: 100%
+    margin-bottom: 150px
 
     @media screen and (max-width: 1280px)
       max-width: 809px
@@ -84,6 +86,14 @@
             height: 230px
             border-radius: 8px
             max-width: 692px
+            opacity: 0
+            animation: anim 1s forwards
+
+            @keyframes anim
+              0%
+                opacity: 0
+              100%
+                opacity: 1
 
             @media screen and (max-width: 1280px)
               height: 199px
@@ -146,3 +156,12 @@
 
       &:active
         background-color: $bg-main1-active
+
+    .secondColor
+      background-color: $bg-main4
+
+      &:hover
+        background-color: #45b36b
+
+      &:active
+        background-color: #368852

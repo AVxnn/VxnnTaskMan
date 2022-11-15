@@ -1,17 +1,35 @@
 @import "../../variables.sass"
 
-
-.hello-subtitle
-  font-size: $font-16px
-  color: $main-white
-
-  @media screen and (max-width: 768px)
-    font-size: $font-10px
-
-.hello-title
-  margin: 2px 0 32px 0
-  font-size: $font-32px
-  color: $main-white
+.hello
+  position: relative
+  margin-bottom: 64px
 
   @media screen and (max-width: 768px)
-    font-size: $font-24px
+    margin-bottom: 44px
+
+  .hello-subtitle
+    font-size: $font-16px
+    color: $main-white
+    opacity: 0
+    animation: anim 1s forwards
+    animation-delay: 100ms
+
+    @media screen and (max-width: 768px)
+      font-size: $font-10px
+
+  .hello-title
+    position: absolute
+    margin: 2px 0 0 0
+    font-size: $font-32px
+    color: $main-white
+    animation: anim 1s forwards
+    opacity: 0
+
+    @media screen and (max-width: 768px)
+      font-size: $font-24px
+
+  @keyframes anim
+    0%
+      opacity: 0
+    100%
+      opacity: 1

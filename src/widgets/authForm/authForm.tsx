@@ -12,6 +12,8 @@ import { getAuth, signInWithEmailAndPassword, updateProfile  } from "firebase/au
 import {updateDoc, doc, getFirestore, Timestamp, getDoc} from "firebase/firestore";
 import {db} from "../../entities/firebase/Firebase";
 import {useNavigate} from "react-router-dom";
+import {useDispatch} from "react-redux";
+import {setUid} from "../../entities/reducers/userSlice/userSlice";
 
 const AuthForm = () => {
 
@@ -22,7 +24,7 @@ const AuthForm = () => {
   })
 
   const auth = getAuth()
-  console.log(auth)
+  const dispatch = useDispatch()
   const navigate = useNavigate()
 
   const login = async (e) => {
@@ -30,9 +32,8 @@ const AuthForm = () => {
     await signInWithEmailAndPassword (auth, data.email, data.password)
       .then( async (userCredential) => {
         const user = userCredential.user;
-        await updateDoc(doc(db, "users", user.uid), {
-          isOnline: true,
-        });
+        dispatch(setUid(user.uid))
+        navigate(`/`)
       })
       .catch((error) => {
         console.log(error.code, error.message)
@@ -43,7 +44,6 @@ const AuthForm = () => {
         })
       });
     console.log('login', auth.currentUser)
-    navigate(`/`)
   }
 
   const setHandler = (item, type) => {

@@ -1,21 +1,15 @@
 import React, {createContext, useEffect, useState} from 'react';
 import { onAuthStateChanged } from 'firebase/auth'
-import { auth } from "../firebase/Firebase"
-import { doc, getDoc } from "firebase/firestore";
-import {db} from '../firebase/Firebase'
+import {auth} from "../firebase/Firebase"
 
-interface AuthUserProviderProps {
-  children?: React.ReactNode
-}
-
-export const AuthContext = createContext<AuthUserProviderProps | null >({})
+export const AuthContext = createContext<any>({})
 
 const AuthProvider = ({children}: any) : JSX.Element => {
-  const [user, setUser] = useState(null)
+  const [user, setUser] = useState() as any
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    onAuthStateChanged(auth, user => {
+    onAuthStateChanged(auth, (user) => {
       setUser(user)
     })
     setLoading(false)

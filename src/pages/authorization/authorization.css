@@ -24,6 +24,11 @@
     justify-content: center;
   }
 }
+@media screen and (max-height: 540px) {
+  .container-auth .bg-left {
+    height: 20%;
+  }
+}
 .container-auth .bg-left .bg-left-logotype {
   width: auto;
   position: relative;

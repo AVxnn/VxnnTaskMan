@@ -7,8 +7,17 @@
   width: 100%
   margin-right: 10px
   display: flex
+  opacity: 0
   flex-direction: column
   box-sizing: border-box
+  animation: anim 1s forwards
+  animation-delay: 0s
+
+  @keyframes anim
+    0%
+      opacity: 0
+    100%
+      opacity: 1
 
   @media screen and (max-width: 1280px)
     padding: 13px 20px
@@ -95,6 +104,12 @@
     @media screen and (max-width: 768px)
       position: absolute
       right: 8px
+      bottom: 8px
+
+    @media screen and (max-width: 540px)
+      position: absolute
+      right: 8px
+      bottom: 6px
 
 
     &:hover
