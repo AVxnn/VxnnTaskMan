@@ -1,33 +1,24 @@
 import React, {useEffect, useState} from 'react';
 import './block.sass'
-import Popup from "../../widgets/Popup/Popup";
 import Moment from "react-moment";
 import {useSelector} from "react-redux";
-import {doc, updateDoc} from "firebase/firestore";
-import {db} from "../../entities/firebase/Firebase";
-import numberOfDay from "../../entities/NumberOfDay/numberOfDay";
 
-const Block = ({time, blocker, type, color, header, left, text, custom, delay, setOpen, open}) : any => {
+const Block = ({blocker, type, color, header, left, text, custom, delay, setOpen, open}) : any => {
 
-  const value = useSelector((state: any) => state.user)
+  const value = useSelector((state: any) => state.user.data)
 
-  const [timeS, setTimeS] = useState() as any
-  const [timeL, setTimeL] = useState() as any
+  const [timeS, setTimeS] = useState(value.workedTime) as any
+  const [timeL, setTimeL] = useState(value.limitDay / 5 * 60 * 60 * 1000) as any
   const [interval, setInterval] = useState() as any
   const [worked, setWorked] = useState(value.worked) as any
 
-  if (blocker && window.innerWidth <= 768) {
-      return null
-  }
-
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
-    setTimeS(time)
-    setTimeL(time + value.limitDay / 5 * 60 * 60 * 1000)
-    setInterval(value.limitDay / 5)
-    console.log(value.worked)
-    setWorked(value.worked)
-  }, [time, value.worked, value.limitDay])
+      let data = Date.now()
+      setTimeS(value.workedTime)
+      setTimeL((data - value.limitDay / 5 * 60 * 60 * 1000) - (value.workedTime - data))
+      setInterval(value.limitDay / 5)
+      setWorked(value.worked)
+  }, [value]);
 
   if(type === 1) {
     return (
@@ -46,10 +37,10 @@ const Block = ({time, blocker, type, color, header, left, text, custom, delay, s
         <div style={{backgroundColor: color, animationDelay: delay + 'ms'}} className={`block ${left ? 'block-left' : ''}`}>
           <p className='title'>{header}</p>
           {
-            !worked ? (
-              <h2 className='text'>{interval}:00</h2>
-            ) : (
+            worked ? (
               <h2 className='text'><Moment date={timeL} format="h:mm" durationFromNow></Moment></h2>
+            ) : (
+              <h2 className='text'>{interval}:00</h2>
             )
           }
         </div>

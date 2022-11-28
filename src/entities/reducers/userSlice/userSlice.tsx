@@ -5,7 +5,7 @@ export interface userState {
   name: string,
   uid: string
   worked: boolean,
-  timeWorkToday: object,
+  timeWorkToday: any,
   limitDay: number,
   workedTime: object,
   data: any

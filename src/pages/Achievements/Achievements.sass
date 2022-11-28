@@ -1,0 +1,25 @@
+
+.achievements-container
+  display: flex
+  height: 333px
+  width: 100%
+
+  @media screen and (max-width: 768px)
+    flex-wrap: wrap
+
+  .achievements
+    background-color: #303030
+    width: 100%
+    max-width: 765px
+    display: flex
+    flex-direction: column
+    margin-right: 32px
+
+    @media screen and (max-width: 1024px)
+      max-width: 537px
+      margin-right: 16px
+
+    @media screen and (max-width: 768px)
+      max-width: 100%
+      margin: 0
+      width: 100%

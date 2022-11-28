@@ -6,14 +6,14 @@ import {doc, updateDoc} from "firebase/firestore";
 import {db} from "../../entities/firebase/Firebase";
 import {useSelector} from "react-redux";
 import {useDispatch} from "react-redux";
-import {setLimitDay} from "../../entities/reducers/userSlice/userSlice";
+import {setData} from "../../entities/reducers/userSlice/userSlice";
 
-const Popup = ({setOpen, open, setData}) => {
+const Popup = ({setOpen, open}) => {
 
   const [text, setText] = useState(0)
   const dispath = useDispatch()
 
-  const value = useSelector((state: any) => state.user)
+  const value = useSelector((state: any) => state.user.data)
 
   const closePopup = (e) => {
     console.log(e)
@@ -24,8 +24,9 @@ const Popup = ({setOpen, open, setData}) => {
 
   const submitHandler = async (e) => {
     console.log(value)
-    if (text > 0 && text <= 60) {
+    if (text > 20 && text <= 60) {
       setOpen(!open)
+      dispath(setData({...value, limitDay: text}))
       await updateDoc(doc(db, 'users', value.uid), {
         limitDay: text
       })
