@@ -12,6 +12,9 @@ const Block = ({blocker, type, color, header, left, text, custom, delay, setOpen
   const [interval, setInterval] = useState() as any
   const [worked, setWorked] = useState(value.worked) as any
 
+  const [next, setNext] = useState(false) as any
+
+
   useEffect(() => {
       let data = Date.now()
       setTimeS(value.workedTime)
@@ -52,9 +55,20 @@ const Block = ({blocker, type, color, header, left, text, custom, delay, setOpen
     return (
       <>
         <div style={{backgroundColor: color, animationDelay: delay + 'ms', flexDirection: 'row', alignItems: 'flex-end', marginRight: '0'}} className='block'>
-          <div style={{marginRight: '15px'}} className='block-container'>
-            <p className='title'>{header}</p>
-            <h2 className='text'><Moment date={timeS} format="hh" durationFromNow></Moment>{` / ${value.limitDay}`}</h2>
+          <div onMouseEnter={() => setNext(true)} onMouseLeave={() => setNext(false)} style={{marginRight: '15px'}} className='block-container'>
+            {
+              next ? (
+                <>
+                  <p className='title-hover'>{'All worked'}</p>
+                  <h2 className='text-hover'><Moment date={timeS} format="hh" durationFromNow></Moment>{``}</h2>
+                </>
+              ) : (
+                <>
+                  <p className='title'>{header}</p>
+                  <h2 className='text'><Moment date={timeS} format="hh" durationFromNow></Moment>{` / ${value.limitDay}`}</h2>
+                </>
+              )
+            }
           </div>
           <button onClick={() => setOpen(!open)} className='block-btn'></button>
         </div>

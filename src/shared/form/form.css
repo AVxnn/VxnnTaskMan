@@ -31,10 +31,10 @@
   transition: background-color 600000s 0s, color 600000s 0s;
 }
 
-.active {
+.active-form {
   border: 2px solid #9685FF;
 }
-.active:hover {
+.active-form:hover {
   border: 2px solid #9685FF;
 }
 

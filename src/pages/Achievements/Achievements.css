@@ -11,22 +11,62 @@
 .achievements-container .achievements {
   background-color: #303030;
   width: 100%;
-  max-width: 765px;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 30px 20px;
+  box-sizing: border-box;
   flex-direction: column;
+  border-radius: 8px;
   margin-right: 32px;
+  height: 335px;
+  opacity: 0;
+  animation: anim 1s forwards;
+  animation-delay: 150ms;
+  max-width: 733px;
+}
+@media screen and (max-width: 1280px) {
+  .achievements-container .achievements {
+    max-width: 637px;
+    height: 288px;
+  }
 }
 @media screen and (max-width: 1024px) {
   .achievements-container .achievements {
     max-width: 537px;
-    margin-right: 16px;
+    height: 260px;
   }
 }
 @media screen and (max-width: 768px) {
   .achievements-container .achievements {
+    max-width: 500%;
+    margin-right: 0;
+  }
+}
+.achievements-container .right-block {
+  max-width: 174px;
+  width: 100%;
+  max-height: 288px;
+}
+@media screen and (max-width: 1024px) {
+  .achievements-container .right-block {
+    max-height: 260px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .achievements-container .right-block {
+    max-height: 216px;
     max-width: 100%;
-    margin: 0;
     width: 100%;
+  }
+}
+
+@keyframes anim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
